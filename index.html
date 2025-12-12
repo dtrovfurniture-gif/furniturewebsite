@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shri Mallinath Furnitures</title>
+  <link rel="stylesheet" href="style/style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+    }
+    .fade-slider-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 30px auto;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      height: auto;
+    }
+    .fade-slide {
+      display: none;
+      position: absolute;
+      width: 100%;
+      animation: fadeEffect 1s ease-in-out;
+    }
+    .fade-slide.active {
+      display: block;
+      position: relative;
+    }
+    .fade-slide img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 6px;
+    }
+    @keyframes fadeEffect {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="branding">
+        <img src="images/uselogo.png" alt="Showroom Logo" width="200" height="100">
+        <h1>&nbsp;&nbsp;&nbsp;Shri Mallinath Furnitures</h1>
+      </div>
+      <nav>
+        <a href="html/index.html">Home</a>
+        <a href="html/warranty.html">Warranty</a>
+        <a href="html/contact.html">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+  <div class="fade-slider-container">
+    <div class="fade-slide active"><img src="images/imgslide1.jpg" alt="Furniture 1"></div>
+    <div class="fade-slide"><img src="images/imgslide2.jpg" alt="Furniture 2"></div>
+    <div class="fade-slide"><img src="images/imgslide3.jpg" alt="Furniture 3"></div>
+    <div class="fade-slide"><img src="images/imgslide4.jpg" alt="Furniture 4"></div>
+  </div>
+
+  <main style="padding: 20px;">
+    <h2>Beautiful & Durable Furniture for Every Space</h2>
+    <p>We offer high-quality wooden, metal, and modular furniture designed to suit Indian homes and offices.</p>
+
+    <section>
+      <h3>About Shri Mallinath Furnitures</h3>
+      <p>
+        Welcome to <strong>Shri Mallinath Furnitures</strong>, your trusted destination for high-quality furniture and furnishings in the <strong>Delhi NCR</strong> region. Established in <strong>September 2023</strong>, we are a fast-growing and passionate team dedicated to redefining interiors with beautiful, functional, and long-lasting furniture solutions. Whether you're setting up a home, office, hotel, or institution, we have everything you need under one roof.
+      </p>
+      <p>
+        Our showroom, located at <strong>1076, Niti Khand-1, Indirapuram, Ghaziabad</strong>, is a one-stop shop where you’ll find an impressive range of <strong>solid wood furniture</strong>, <strong>modular units</strong>, and <strong>furnishings</strong>—all crafted to meet modern tastes while maintaining timeless durability.
+      </p>
+      <p>
+        What sets Shri Mallinath Furnitures apart is our <strong>in-house manufacturing capability</strong>, especially in <strong>solid wood furniture</strong>. Unlike many local retailers who rely entirely on third-party suppliers, we take pride in producing our own designs using <strong>premium raw materials</strong> and high-quality boards. We are closely associated with <strong>Crystal Furnitech</strong>, a renowned name in the furniture manufacturing industry. Crystal not only manufactures a wide range of furniture but also produces the <strong>engineered boards</strong> used in their construction—ensuring complete control over quality from raw material to finished product.
+      </p>
+      <p>
+        Our modular furniture section includes a wide array of items for kitchens, wardrobes, office setups, and more. Whether you're furnishing a cozy apartment or a sprawling commercial office, our designs are crafted to offer <strong>maximum space utilization, modern appeal, and unmatched durability</strong>.
+      </p>
+      <p>
+        Furniture is only half the story—furnishings bring life to any interior. To offer a complete décor solution, we have partnered with <strong>Swayam</strong>, a prestigious furnishing brand with over <strong>20 years of experience</strong> in textiles and home décor. Our showroom features an exclusive range of <strong>curtains, bedsheets, cushions, table linens</strong>, and more, allowing our customers to seamlessly coordinate their spaces with elegance and comfort.
+      </p>
+      <p>
+        We cater to a <strong>diverse clientele</strong> across <strong>homes, offices, hotels, and institutions</strong>. Whether it’s a custom-designed study table for your home, modular wardrobes for an apartment project, or bulk orders for hotels and schools, we bring the same level of professionalism and attention to detail to every job.
+      </p>
+      <p>
+        <strong>Why Choose Us?</strong>
+        <ul>
+          <li>Own manufacturing for solid wood & modular furniture</li>
+          <li>Association with Crystal Furnitech – quality boards & products</li>
+          <li>Premium furnishings from Swayam</li>
+          <li>Customization options to match your space</li>
+          <li>Experienced craftsmanship & attention to detail</li>
+          <li>Central location in Indirapuram, Ghaziabad</li>
+          <li>Dedicated service to customers across Delhi NCR</li>
+        </ul>
+      </p>
+      <p>
+        At Shri Mallinath Furnitures, we believe furniture is more than just utility—it’s an expression of lifestyle and comfort. That’s why every piece we offer is selected or crafted with care, so it fits perfectly into your life. We invite you to visit our showroom, explore our growing collection, and experience the warmth, functionality, and excellence we strive to deliver.
+      </p>
+    </section>
+    
+  </main>
+
+  <footer>
+    <p>📞 +91-8527270722 | 📍 1076, Niti Khand-1, Indirapuram, Ghaziabad, Uttar Pradesh 201014</p>
+    &copy; 2025 Shri Mallinath Furnitures
+  </footer>
+
+  <script>
+    let fadeIndex = 0;
+    const fadeSlides = document.querySelectorAll('.fade-slide');
+
+    function showFadeSlides() {
+      fadeSlides.forEach(slide => slide.classList.remove('active'));
+      fadeIndex = (fadeIndex + 1) % fadeSlides.length;
+      fadeSlides[fadeIndex].classList.add('active');
+    }
+
+    fadeSlides[fadeIndex].classList.add('active');
+    setInterval(showFadeSlides, 3000);
+  </script>
+</body>
+</html>
